@@ -5,16 +5,94 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Location villa Bora Bora face au lagon | Octopus & Manta Villa</title>
 <meta name="description" content="Deux villas de rêve avec piscine privée et accès direct au lagon à Bora Bora. Jusqu'à 6 personnes. Hôtes locaux. Réservez en direct et économisez.">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://www.mantavillaborabora.com/">
+<link rel="alternate" hreflang="fr" href="https://www.mantavillaborabora.com/">
+<link rel="alternate" hreflang="en" href="https://www.mantavillaborabora.com/">
+<link rel="alternate" hreflang="x-default" href="https://www.mantavillaborabora.com/">
 
 <meta property="og:title" content="Location villa Bora Bora face au lagon | Octopus & Manta Villa">
 <meta property="og:description" content="Deux villas de rêve avec piscine privée et accès direct au lagon à Bora Bora. Jusqu'à 6 personnes. Hôtes locaux. Réservez en direct et économisez.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.mantavillaborabora.com">
+<meta property="og:url" content="https://www.mantavillaborabora.com/">
+<meta property="og:image" content="https://www.mantavillaborabora.com/images/hero.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Piscine privée face au lagon de Bora Bora — Octopus & Manta Villa">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:site_name" content="Octopus & Manta Villa — Bora Bora">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Villas de rêve face au lagon — Bora Bora">
 <meta name="twitter:description" content="Piscine privée, accès direct au lagon, hôtes locaux passionnés. Réservez en direct.">
+<meta name="twitter:image" content="https://www.mantavillaborabora.com/images/hero.jpeg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LodgingBusiness",
+      "@id": "https://www.mantavillaborabora.com/#business",
+      "name": "Octopus & Manta Villa",
+      "description": "Deux villas de charme avec piscine privée et accès direct au lagon à Bora Bora, Polynésie française. Hôtes locaux, Superhost Airbnb.",
+      "url": "https://www.mantavillaborabora.com/",
+      "telephone": "+68989221376",
+      "email": "contact@mantavillaborabora.com",
+      "image": "https://www.mantavillaborabora.com/images/hero.jpeg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Vai Api",
+        "addressLocality": "Bora Bora",
+        "postalCode": "98730",
+        "addressCountry": "PF"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-16.5004",
+        "longitude": "-151.7415"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.95",
+        "reviewCount": "47",
+        "bestRating": "5"
+      },
+      "amenityFeature": [
+        {"@type": "LocationFeatureSpecification", "name": "Piscine privée", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Accès direct au lagon", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Climatisation", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Cuisine équipée", "value": true}
+      ],
+      "priceRange": "€€€"
+    },
+    {
+      "@type": "Accommodation",
+      "@id": "https://www.mantavillaborabora.com/#octopus",
+      "name": "Octopus Villa",
+      "description": "Villa de prestige sur 2 étages avec piscine privée face au lagon. 3 chambres, 3 salles de bain, terrasse repas extérieure, accès direct à la mer.",
+      "url": "https://www.mantavillaborabora.com/#octopus",
+      "image": "https://www.mantavillaborabora.com/images/oct-gal-main.jpeg",
+      "occupancy": {"@type": "QuantitativeValue", "maxValue": 6},
+      "numberOfRooms": 3,
+      "containedInPlace": {"@id": "https://www.mantavillaborabora.com/#business"}
+    },
+    {
+      "@type": "Accommodation",
+      "@id": "https://www.mantavillaborabora.com/#manta",
+      "name": "Manta Villa",
+      "description": "Villa intime face au lagon, décoration en teck massif sculpté, 2 chambres, grande douche italienne, terrasse privée avec accès direct à l'eau.",
+      "url": "https://www.mantavillaborabora.com/#manta",
+      "image": "https://www.mantavillaborabora.com/images/man-gal-main.jpeg",
+      "occupancy": {"@type": "QuantitativeValue", "maxValue": 4},
+      "numberOfRooms": 2,
+      "containedInPlace": {"@id": "https://www.mantavillaborabora.com/#business"}
+    }
+  ]
+}
+</script>
 
 <link rel="icon" type="image/jpeg" href="images/favicon.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -561,8 +639,8 @@ footer{background:#0c2534;color:rgba(255,255,255,.65);padding:52px 32px 28px;}
       <div class="bsum">
         <div><div class="bprice" id="tp">—</div><div class="bnote" id="pb"></div></div>
         <div class="bbtns">
-          <a href="#" class="btn-p" id="bdBtn"><span class="fr-text">Réserver en direct</span><span class="en-text">Book directly</span></a>
-          <a href="LIEN_AIRBNB_OCTOPUS_ICI" target="_blank" class="btn-ab">⬡ Airbnb</a>
+          <a href="#" onclick="openBookModal();return false;" class="btn-p" id="bdBtn"><span class="fr-text">Réserver en direct</span><span class="en-text">Book directly</span></a>
+          <a href="https://www.airbnb.fr/rooms/968187139458719358" target="_blank" class="btn-ab">⬡ Airbnb</a>
         </div>
       </div>
       <div class="sav-banner" id="sv"></div>
@@ -606,7 +684,6 @@ footer{background:#0c2534;color:rgba(255,255,255,.65);padding:52px 32px 28px;}
     <div class="div"></div>
     <p class="ssub">Sandrine et Romain sont aussi les propriétaires du <strong>Nautilus — Bora Bora Water World</strong>. Toutes les activités sont organisées sur demande, directement depuis la villa.</p>
     <div class="act-grid">
-      <div class="acard"><div class="aimg ao">🦈</div><div class="abody"><div class="aname">Raies & requins</div><p class="adesc">Nage avec raies pastenagues et requins pointe noire. Accessible à tous niveaux, guidé par des locaux.</p></div></div>
       <div class="acard">
   <div style="height:140px;overflow:hidden;position:relative;">
     <img loading="lazy" src="images/act-loulou.jpeg" alt="Excursion Capitaine Loulou Bora Bora lagon sous-marin" style="width:100%;height:100%;object-fit:cover;object-position:center 60%;">
@@ -627,7 +704,6 @@ footer{background:#0c2534;color:rgba(255,255,255,.65);padding:52px 32px 28px;}
     <a href="https://www.boraborawaterworld.com" target="_blank" style="display:inline-block;margin-top:8px;font-size:11px;color:#1a4a5c;font-weight:500;text-decoration:none;border:1px solid #1a4a5c;padding:3px 9px;border-radius:4px;">→ boraborawaterworld.com</a>
   </div>
 </div>
-      <div class="acard"><div class="aimg an">🪸</div><div class="abody"><div class="aname">Snorkeling au récif</div><p class="adesc">Depuis la propriété, explorez directement les fonds de Vai Api. Masques fournis.</p></div></div>
       <div class="acard">
   <div style="height:140px;overflow:hidden;position:relative;">
     <img loading="lazy" src="images/act-scooter.jpeg" alt="Dîner coucher de soleil sur le lagon — Bora Bora Water World" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
@@ -636,8 +712,19 @@ footer{background:#0c2534;color:rgba(255,255,255,.65);padding:52px 32px 28px;}
   </div>
   <div class="abody">
     <div class="aname">Dîner coucher de soleil — Nautilus</div>
-    <p class="adesc">Dîner gastronomique à bord de notre Nautilus au coucher de soleil. Champagne, homard flambé, vue sur le lagon.</p>
+    <p class="adesc">Dîner gastronomique à bord de notre Nautilus au coucher de soleil. Langouste fraîche, vue sur le lagon. Boissons incluses : punch, bière, vins blanc & rouge, softs.</p>
     <a href="https://www.boraborawaterworld.com" target="_blank" style="display:inline-block;margin-top:8px;font-size:11px;color:#1a4a5c;font-weight:500;text-decoration:none;border:1px solid #1a4a5c;padding:3px 9px;border-radius:4px;">→ boraborawaterworld.com</a>
+  </div>
+</div>
+      <div class="acard">
+  <div style="height:140px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a4a5c 0%,#2d7a8a 100%);position:relative;overflow:hidden;">
+    <div style="font-size:52px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.3));">⛵</div>
+    <div style="position:absolute;bottom:10px;left:12px;font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.08em;font-weight:500;">Transfert privé</div>
+  </div>
+  <div class="abody">
+    <div class="aname">Transfert privé en bateau</div>
+    <p class="adesc">Navette privée entre la villa, les hôtels sur les motus et l'aéroport. Transfert discret et personnalisé, à l'heure que vous souhaitez.</p>
+    <a href="#" onclick="openTransferModal();return false;" style="display:inline-block;margin-top:8px;font-size:11px;color:var(--ocean);font-weight:500;text-decoration:none;border:1px solid var(--ocean);padding:3px 9px;border-radius:4px;">→ Demander un devis</a>
   </div>
 </div>
       <div class="acard">
@@ -650,7 +737,7 @@ footer{background:#0c2534;color:rgba(255,255,255,.65);padding:52px 32px 28px;}
   <div class="abody">
     <div class="aname">Location voiture — Avis Bora Bora</div>
     <p class="adesc">Explorez l'île à votre rythme. Plages cachées, points de vue panoramiques, villages typiques.</p>
-    <a href="https://www.avis.fr" target="_blank" style="display:inline-block;margin-top:8px;font-size:11px;color:#cc0000;font-weight:500;text-decoration:none;border:1px solid #cc0000;padding:3px 9px;border-radius:4px;">→ avis.fr</a>
+    <a href="https://www.avis-borabora.com" target="_blank" style="display:inline-block;margin-top:8px;font-size:11px;color:#cc0000;font-weight:500;text-decoration:none;border:1px solid #cc0000;padding:3px 9px;border-radius:4px;">→ avis-borabora.com</a>
   </div>
 </div>
     </div>
@@ -724,8 +811,8 @@ footer{background:#0c2534;color:rgba(255,255,255,.65);padding:52px 32px 28px;}
 // CALENDRIER — MODIFIER LES DATES RÉSERVÉES ICI
 // Format : 'ANNEE-MOIS': [jours réservés]  (mois: 1=Jan, 12=Déc)
 // ============================================================
-var bkO={'2026-4':[1,2,3,10,11,12,13,19,20,21],'2026-5':[5,6,7,8,15,16,22,23,24,25,26],'2026-6':[3,4,5,12,13,20,21,27,28]};
-var bkM={'2026-4':[4,5,6,7,14,15,16,22,23,24,25],'2026-5':[1,2,3,9,10,11,18,19,20,21,28,29,30],'2026-6':[5,6,7,8,15,16,17,23,24,25]};
+var bkO={};
+var bkM={};
 var vP={octopus:700,manta:170};
 var vF={octopus:200,manta:60};
 
@@ -814,7 +901,6 @@ function updatePanel(){
   document.getElementById('pb').textContent=n+' nuits x '+pr+'\u20ac + '+fe+'\u20ac m\u00e9nage';
   document.getElementById('sv').innerHTML='<strong>\u00c9conomie :</strong> environ '+sav+'\u20ac \u00e9conomis\u00e9s vs Airbnb.';
   var vn=villa==='octopus'?'Octopus Villa':'Manta Villa';
-  document.getElementById('bdBtn').href='mailto:contact@mantavillaborabora.com?subject=R%C3%A9servation+'+encodeURIComponent(vn)+'&body=Bonjour%2C%0A%0AJe+souhaite+r%C3%A9server+la+'+encodeURIComponent(vn)+'+du+'+encodeURIComponent(as)+'+au+'+encodeURIComponent(bs)+'.%0A%0AMerci+!';
   // Update Airbnb button
   var abBtn=document.querySelector('.btn-ab');
   if(abBtn) abBtn.href=airbnbLinks[villa]||'https://www.airbnb.fr';
@@ -845,18 +931,16 @@ function syncIcal(){
 }
 
 function parseIcalForVilla(ics, sourceUrl, targetVilla){
-  // Determine which villa from URL (store separately)
-  // targetVilla passed as parameter
-  
-  var booked = {};
   var lines = ics.replace(/\r/g,'').split('\n');
   var inEvent = false, dtStart = '', dtEnd = '';
-  
+  var events = [];
+
+  // 1re passe : collecter tous les événements
   for(var i=0; i<lines.length; i++){
     var l = lines[i].trim();
     if(l === 'BEGIN:VEVENT'){ inEvent=true; dtStart=''; dtEnd=''; }
     if(l === 'END:VEVENT' && inEvent){
-      if(dtStart && dtEnd){ markRange(booked, dtStart, dtEnd); }
+      if(dtStart && dtEnd){ events.push({s:dtStart, e:dtEnd}); }
       inEvent=false;
     }
     if(inEvent){
@@ -864,26 +948,49 @@ function parseIcalForVilla(ics, sourceUrl, targetVilla){
       if(l.startsWith('DTEND'))   dtEnd   = l.split(':').pop().split('T')[0];
     }
   }
-  
-  // Update booking data
+
+  // Marquer tous les jours indisponibles.
+  // DTEND dans le iCal est exclusif (ex. DTEND=30 mai = les clients partent le 30).
+  // Pour les vraies réservations (durée > 1j), on marque aussi le DTEND lui-même
+  // (= jour de checkout) car ce jour est bloqué pour le ménage/départ.
+  var booked = {};
+  for(var k=0; k<events.length; k++){
+    var ev = events[k];
+    markRange(booked, ev.s, ev.e); // marque DTSTART → DTEND-1
+
+    // Pour les vraies réservations multi-jours : ajouter aussi le jour de checkout
+    var dS2 = new Date(ev.s.substr(0,4)+'-'+ev.s.substr(4,2)+'-'+ev.s.substr(6,2));
+    var dE2 = new Date(ev.e.substr(0,4)+'-'+ev.e.substr(4,2)+'-'+ev.e.substr(6,2));
+    if((dE2 - dS2) / 86400000 > 1){
+      var ey = parseInt(ev.e.substr(0,4));
+      var em = parseInt(ev.e.substr(4,2)) - 1; // 0-indexed
+      var ed = parseInt(ev.e.substr(6,2));
+      var key = ey + '-' + (em+1);
+      if(!booked[key]) booked[key] = [];
+      if(!booked[key].includes(ed)) booked[key].push(ed);
+    }
+  }
+
+  // Mettre à jour les données de réservation
   if(targetVilla === 'octopus'){
     bkO = booked;
   } else {
     bkM = booked;
   }
-  
+
   var total = Object.values(booked).reduce(function(a,b){ return a+b.length; }, 0);
   setIcalStatus('✅ Synchronisé ! ' + total + ' jours réservés importés depuis Airbnb', 'ok');
-  
-  // Save URL in localStorage for auto-reload
+
   try{ localStorage.setItem('ical_' + targetVilla, sourceUrl); } catch(e){}
-  
+
   render();
 }
 
 function markRange(obj, startStr, endStr){
-  var d = new Date(startStr.substr(0,4)+'-'+startStr.substr(4,2)+'-'+startStr.substr(6,2));
-  var end = new Date(endStr.substr(0,4)+'-'+endStr.substr(4,2)+'-'+endStr.substr(6,2));
+  // Constructeur new Date(y,m,d) = heure locale → évite le décalage UTC
+  // (new Date("YYYY-MM-DD") = minuit UTC = veille 14h en Polynésie UTC-10)
+  var d = new Date(+startStr.substr(0,4), +startStr.substr(4,2)-1, +startStr.substr(6,2));
+  var end = new Date(+endStr.substr(0,4), +endStr.substr(4,2)-1, +endStr.substr(6,2));
   while(d < end){
     var key = d.getFullYear()+'-'+(d.getMonth()+1);
     if(!obj[key]) obj[key]=[];
@@ -965,13 +1072,290 @@ function toggleLang(){
   render(); // refresh calendar day/month names
 }
 
+// ============================================================
+// FORMULAIRE DE RÉSERVATION DIRECTE
+// ============================================================
+function openBookModal(){
+  var m=document.getElementById('bookModal');
+  if(!m) return;
+  // Nom villa
+  document.getElementById('bm-villa').textContent=villa==='octopus'?'Octopus Villa':'Manta Villa';
+  // Pré-remplir dates depuis le calendrier si sélectionnées
+  if(cin){
+    var d=new Date(cin.y,cin.m,cin.d);
+    document.getElementById('bm-cin').value=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  } else { document.getElementById('bm-cin').value=''; }
+  if(cout){
+    var d2=new Date(cout.y,cout.m,cout.d);
+    document.getElementById('bm-cout').value=d2.getFullYear()+'-'+String(d2.getMonth()+1).padStart(2,'0')+'-'+String(d2.getDate()).padStart(2,'0');
+  } else { document.getElementById('bm-cout').value=''; }
+  // Adapter les options adultes selon la villa
+  var selA=document.getElementById('bm-adults');
+  var maxA=villa==='manta'?4:8;
+  selA.innerHTML='';
+  for(var i=1;i<=maxA;i++) selA.innerHTML+='<option value="'+i+'"'+(i===2?' selected':'')+'>'+i+'</option>';
+  updateBookForm();
+  m.style.display='flex';
+  document.body.style.overflow='hidden';
+}
+function closeBookModal(){
+  document.getElementById('bookModal').style.display='none';
+  document.body.style.overflow='';
+}
+function updateBookForm(){
+  var adults=parseInt(document.getElementById('bm-adults').value)||1;
+  var selC=document.getElementById('bm-children');
+  var maxTotal=villa==='manta'?4:12;
+  var maxChild=Math.max(0,maxTotal-adults);
+  // Recalculer options enfants
+  var curChild=parseInt(selC.value)||0;
+  selC.innerHTML='';
+  for(var i=0;i<=Math.min(maxChild,6);i++) selC.innerHTML+='<option value="'+i+'"'+(i===Math.min(curChild,maxChild)?' selected':'')+'>'+i+'</option>';
+  var children=parseInt(selC.value)||0;
+  var total=adults+children;
+  // Avertissement Manta
+  var warn=document.getElementById('bm-warn');
+  if(villa==='manta'&&total>4){
+    warn.textContent='⚠️ La Manta Villa accueille 4 personnes maximum (adultes + enfants).';
+    warn.style.display='block';
+  } else { warn.style.display='none'; }
+  // Générer les champs de noms
+  var c=document.getElementById('bm-names');
+  c.innerHTML='';
+  for(var a=1;a<=adults;a++){
+    c.innerHTML+='<div style="margin-bottom:8px;"><label style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;display:block;margin-bottom:3px;">Adulte '+a+'</label><input type="text" placeholder="Prénom et nom" style="width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;box-sizing:border-box;" class="bm-name" data-type="Adulte '+a+'"></div>';
+  }
+  for(var ch=1;ch<=children;ch++){
+    c.innerHTML+='<div style="margin-bottom:8px;"><label style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;display:block;margin-bottom:3px;">Enfant '+ch+'</label><input type="text" placeholder="Prénom et nom" style="width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;box-sizing:border-box;" class="bm-name" data-type="Enfant '+ch+'"></div>';
+  }
+  updateBookPrice();
+}
+function updateBookPrice(){
+  var cinV=document.getElementById('bm-cin').value;
+  var coutV=document.getElementById('bm-cout').value;
+  var adults=parseInt(document.getElementById('bm-adults').value)||1;
+  var children=parseInt(document.getElementById('bm-children').value)||0;
+  var el=document.getElementById('bm-price');
+  if(!cinV||!coutV){el.style.display='none';return;}
+  var d1=new Date(cinV),d2=new Date(coutV);
+  var nights=Math.round((d2-d1)/86400000);
+  if(nights<=0){el.style.display='none';return;}
+  var pr=vP[villa],fe=vF[villa];
+  var extra=villa==='octopus'?Math.max(0,adults+children-6):0;
+  var tot=nights*pr+nights*extra*100+fe;
+  var detail=nights+' nuits × '+pr+'€';
+  if(extra>0) detail+=' + '+extra+' pers. suppl. × '+nights+' nuits × 100€';
+  detail+=' + '+fe+'€ ménage';
+  el.innerHTML='<div style="background:#f0f7fa;border-radius:8px;padding:14px 16px;margin:14px 0;border-left:3px solid var(--ocean);"><div style="font-size:22px;font-weight:600;color:var(--ocean);">'+tot.toLocaleString('fr-FR')+' €</div><div style="font-size:11px;color:#888;margin-top:3px;">'+detail+'</div></div>';
+  el.style.display='block';
+}
+function submitBookForm(){
+  var cinV=document.getElementById('bm-cin').value;
+  var coutV=document.getElementById('bm-cout').value;
+  var adults=parseInt(document.getElementById('bm-adults').value)||1;
+  var children=parseInt(document.getElementById('bm-children').value)||0;
+  if(!cinV||!coutV){alert('Veuillez sélectionner vos dates d\'arrivée et de départ.');return;}
+  var d1=new Date(cinV),d2=new Date(coutV);
+  var nights=Math.round((d2-d1)/86400000);
+  if(nights<=0){alert('La date de départ doit être après la date d\'arrivée.');return;}
+  if(villa==='manta'&&adults+children>4){alert('La Manta Villa accueille 4 personnes maximum.');return;}
+  // Collecter les noms
+  var nameInputs=document.querySelectorAll('#bm-names .bm-name');
+  var namesLines='';
+  nameInputs.forEach(function(inp){
+    namesLines+='  • '+inp.getAttribute('data-type')+' : '+(inp.value.trim()||'(non renseigné)')+'\n';
+  });
+  var vn=villa==='octopus'?'Octopus Villa':'Manta Villa';
+  var opts={day:'numeric',month:'long',year:'numeric'};
+  var cinStr=d1.toLocaleDateString('fr-FR',opts);
+  var coutStr=d2.toLocaleDateString('fr-FR',opts);
+  var pr=vP[villa],fe=vF[villa];
+  var extra=villa==='octopus'?Math.max(0,adults+children-6):0;
+  var tot=nights*pr+nights*extra*100+fe;
+  var detail=nights+' nuits × '+pr+'€';
+  if(extra>0) detail+=' + '+extra+' pers. suppl. × '+nights+' nuits × 100€';
+  detail+=' + '+fe+'€ ménage';
+  var msg=document.getElementById('bm-message').value.trim();
+  var body='Bonjour Sandrine et Romain,\n\n'
+    +'Je vous adresse une demande de réservation en direct.\n\n'
+    +'━━━━━━━━━━━━━━━━━━━━━━━━\n'
+    +'VILLA    : '+vn+'\n'
+    +'ARRIVÉE  : '+cinStr+'\n'
+    +'DÉPART   : '+coutStr+'\n'
+    +'DURÉE    : '+nights+(nights>1?' nuits':' nuit')+'\n'
+    +'━━━━━━━━━━━━━━━━━━━━━━━━\n'
+    +'VOYAGEURS ('+( adults+children)+' pers.) :\n'
+    +namesLines
+    +'━━━━━━━━━━━━━━━━━━━━━━━━\n'
+    +'TARIF ESTIMÉ : '+tot.toLocaleString('fr-FR')+' €\n'
+    +'('+detail+')\n'
+    +'━━━━━━━━━━━━━━━━━━━━━━━━\n'
+    +(msg?'MESSAGE :\n'+msg+'\n\n':'\n')
+    +'Dans l\'attente de votre confirmation,\nCordialement';
+  var subject='Demande réservation '+vn+' — du '+cinStr+' au '+coutStr;
+  window.location.href='mailto:contact@mantavillaborabora.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+}
+
+// ============================================================
+// DEVIS TRANSFERT PRIVÉ
+// ============================================================
+var transferPoints=[
+  '🏠 Octopus & Manta Villa — Vai Api',
+  '✈️ Aéroport de Bora Bora — Motu Mute',
+  '⚓ Quai de Vaitape',
+  '🏨 Conrad Bora Bora Nui',
+  '🏨 Bora Bora Pearl Beach Resort & Spa',
+  '🏨 St. Regis Bora Bora Resort',
+  '🏨 Four Seasons Resort Bora Bora',
+  '🏨 InterContinental Bora Bora Thalasso',
+  '🏨 The Westin Bora Bora Resort & Spa',
+  '📍 Autre (préciser dans les notes)'
+];
+function openTransferModal(){
+  var m=document.getElementById('transferModal');
+  if(!m) return;
+  // Remplir les selects depuis/vers
+  ['tf-from','tf-to'].forEach(function(id,idx){
+    var sel=document.getElementById(id);
+    sel.innerHTML='<option value="">— Choisir —</option>';
+    transferPoints.forEach(function(p){ sel.innerHTML+='<option value="'+p+'">'+p+'</option>'; });
+    if(idx===0&&sel.options[1]) sel.selectedIndex=1; // pré-sélectionner Villa au départ
+  });
+  document.getElementById('tf-date').value='';
+  document.getElementById('tf-time').value='';
+  document.getElementById('tf-pax').value='2';
+  document.getElementById('tf-notes').value='';
+  m.style.display='flex';
+  document.body.style.overflow='hidden';
+}
+function closeTransferModal(){
+  document.getElementById('transferModal').style.display='none';
+  document.body.style.overflow='';
+}
+function submitTransferForm(){
+  var from=document.getElementById('tf-from').value;
+  var to=document.getElementById('tf-to').value;
+  var date=document.getElementById('tf-date').value;
+  var time=document.getElementById('tf-time').value;
+  var pax=document.getElementById('tf-pax').value;
+  var notes=document.getElementById('tf-notes').value.trim();
+  if(!from){alert('Veuillez sélectionner le point de départ.');return;}
+  if(!to){alert('Veuillez sélectionner le point d\'arrivée.');return;}
+  if(from===to){alert('Le départ et l\'arrivée sont identiques.');return;}
+  var dateStr=date?new Date(date+'T12:00').toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'}):'Non précisée';
+  var body='Bonjour Sandrine et Romain,\n\n'
+    +'Je souhaite obtenir un devis pour un transfert privé en bateau.\n\n'
+    +'━━━━━━━━━━━━━━━━━━━━━━━━\n'
+    +'DÉPART   : '+from+'\n'
+    +'ARRIVÉE  : '+to+'\n'
+    +'DATE     : '+dateStr+'\n'
+    +'HEURE    : '+(time||'À préciser')+'\n'
+    +'PASSAGERS: '+pax+'\n'
+    +'━━━━━━━━━━━━━━━━━━━━━━━━\n'
+    +(notes?'NOTES :\n'+notes+'\n\n':'\n')
+    +'Dans l\'attente de votre réponse,\nCordialement';
+  var subject='Devis transfert privé — '+from.replace(/^[^ ]+ /,'')+' → '+to.replace(/^[^ ]+ /,'');
+  window.location.href='mailto:contact@mantavillaborabora.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+}
+
 // AIRBNB LINKS — Remplace par tes vrais liens Airbnb
 var airbnbLinks={
-  octopus:'https://www.airbnb.com/rooms/XXXXX_OCTOPUS',  // ← REMPLACER
-  manta:'https://www.airbnb.com/rooms/XXXXX_MANTA'        // ← REMPLACER
+  octopus:'https://www.airbnb.fr/rooms/968187139458719358',
+  manta:'https://www.airbnb.fr/rooms/44239001'
 };
 
 </script>
+
+<!-- MODAL DEVIS TRANSFERT PRIVÉ -->
+<div id="transferModal" onclick="if(event.target===this)closeTransferModal()" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(10,30,40,.65);backdrop-filter:blur(5px);overflow-y:auto;padding:20px;align-items:flex-start;justify-content:center;">
+  <div style="background:#fff;border-radius:16px;max-width:500px;width:100%;margin:0 auto;padding:32px;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.25);">
+    <button onclick="closeTransferModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;cursor:pointer;font-size:22px;color:#aaa;line-height:1;padding:4px;">✕</button>
+    <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean-l);margin-bottom:4px;font-weight:500;">Service à la demande</div>
+    <h3 style="font-size:20px;font-weight:500;color:var(--ocean);margin:0 0 22px;font-family:'Cormorant Garamond',serif;">⛵ Transfert privé en bateau</h3>
+    <!-- Départ -->
+    <div style="margin-bottom:14px;">
+      <label style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;display:block;margin-bottom:4px;">Point de départ</label>
+      <select id="tf-from" style="width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;background:#fff;box-sizing:border-box;"></select>
+    </div>
+    <!-- Arrivée -->
+    <div style="margin-bottom:14px;">
+      <label style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;display:block;margin-bottom:4px;">Point d'arrivée</label>
+      <select id="tf-to" style="width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;background:#fff;box-sizing:border-box;"></select>
+    </div>
+    <!-- Date / Heure -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+      <div>
+        <label style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;display:block;margin-bottom:4px;">Date</label>
+        <input type="date" id="tf-date" style="width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;box-sizing:border-box;">
+      </div>
+      <div>
+        <label style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;display:block;margin-bottom:4px;">Heure (approx.)</label>
+        <input type="time" id="tf-time" style="width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;box-sizing:border-box;">
+      </div>
+    </div>
+    <!-- Passagers -->
+    <div style="margin-bottom:14px;">
+      <label style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;display:block;margin-bottom:4px;">Nombre de passagers</label>
+      <select id="tf-pax" style="width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;background:#fff;box-sizing:border-box;">
+        <option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10+</option>
+      </select>
+    </div>
+    <!-- Notes -->
+    <div style="margin-bottom:18px;">
+      <label style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;display:block;margin-bottom:4px;">Notes / Précisions</label>
+      <textarea id="tf-notes" rows="3" placeholder="Bagages volumineux, heure de vol, autre point de prise en charge…" style="width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;resize:vertical;box-sizing:border-box;"></textarea>
+    </div>
+    <button onclick="submitTransferForm()" style="width:100%;padding:13px;font-size:14px;background:var(--ocean);color:#fff;border:none;border-radius:8px;cursor:pointer;font-family:inherit;letter-spacing:.04em;transition:background .2s;" onmouseover="this.style.background='var(--ocean-l)'" onmouseout="this.style.background='var(--ocean)'">Envoyer la demande de devis →</button>
+    <p style="font-size:11px;color:#aaa;text-align:center;margin:10px 0 0;">Envoyé à contact@mantavillaborabora.com · Réponse sous 24h</p>
+  </div>
+</div>
+
+<!-- MODAL RÉSERVATION DIRECTE -->
+<div id="bookModal" onclick="if(event.target===this)closeBookModal()" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(10,30,40,.65);backdrop-filter:blur(5px);overflow-y:auto;padding:20px;align-items:flex-start;justify-content:center;">
+  <div style="background:#fff;border-radius:16px;max-width:520px;width:100%;margin:0 auto;padding:32px;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.25);">
+    <button onclick="closeBookModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;cursor:pointer;font-size:22px;color:#aaa;line-height:1;padding:4px;">✕</button>
+    <div id="bm-villa" style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-bottom:4px;font-weight:500;"></div>
+    <h3 style="font-size:20px;font-weight:500;color:var(--ocean);margin:0 0 22px;font-family:'Cormorant Garamond',serif;">Demande de réservation</h3>
+    <!-- Dates -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+      <div>
+        <label style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;display:block;margin-bottom:4px;">Arrivée</label>
+        <input type="date" id="bm-cin" onchange="updateBookPrice()" style="width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;box-sizing:border-box;">
+      </div>
+      <div>
+        <label style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;display:block;margin-bottom:4px;">Départ</label>
+        <input type="date" id="bm-cout" onchange="updateBookPrice()" style="width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;box-sizing:border-box;">
+      </div>
+    </div>
+    <!-- Adultes / Enfants -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+      <div>
+        <label style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;display:block;margin-bottom:4px;">Adultes</label>
+        <select id="bm-adults" onchange="updateBookForm()" style="width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;background:#fff;box-sizing:border-box;"></select>
+      </div>
+      <div>
+        <label style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;display:block;margin-bottom:4px;">Enfants</label>
+        <select id="bm-children" onchange="updateBookForm()" style="width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;background:#fff;box-sizing:border-box;"><option value="0">0</option></select>
+      </div>
+    </div>
+    <!-- Avertissement capacité -->
+    <div id="bm-warn" style="display:none;background:#fef2f2;color:#991b1b;border-radius:6px;padding:10px 14px;font-size:12px;margin-bottom:12px;"></div>
+    <!-- Noms des voyageurs -->
+    <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin-bottom:10px;margin-top:4px;">Noms des voyageurs</div>
+    <div id="bm-names"></div>
+    <!-- Estimation du prix -->
+    <div id="bm-price" style="display:none;"></div>
+    <!-- Message optionnel -->
+    <div style="margin:4px 0 18px;">
+      <label style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;display:block;margin-bottom:4px;">Message (optionnel)</label>
+      <textarea id="bm-message" rows="3" placeholder="Questions, demandes particulières, allergies alimentaires…" style="width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;resize:vertical;box-sizing:border-box;"></textarea>
+    </div>
+    <button onclick="submitBookForm()" style="width:100%;padding:13px;font-size:14px;background:var(--ocean);color:#fff;border:none;border-radius:8px;cursor:pointer;font-family:inherit;letter-spacing:.04em;transition:background .2s;" onmouseover="this.style.background='var(--ocean-l)'" onmouseout="this.style.background='var(--ocean)'">
+      <span class="fr-text">Envoyer la demande →</span><span class="en-text">Send request →</span>
+    </button>
+    <p style="font-size:11px;color:#aaa;text-align:center;margin:10px 0 0;">Envoyé à contact@mantavillaborabora.com · Réponse sous 24h</p>
+  </div>
+</div>
 
 <!-- MODAL CGV -->
 <div id="modalCGV" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,0.6);overflow-y:auto;">
