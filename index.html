@@ -926,6 +926,8 @@ function syncIcal(){
 }
 
 function fetchIcal(proxyUrl, originalUrl, targetVilla, fallbackIdx){
+  var labels = ['serveur local', 'proxy 1', 'proxy 2'];
+  setIcalStatus('⏳ Essai ' + (fallbackIdx + 1) + '/3 (' + (labels[fallbackIdx] || '') + ')...', '');
   var controller = new AbortController();
   var timer = setTimeout(function(){ controller.abort(); }, 10000);
   fetch(proxyUrl, { signal: controller.signal })
