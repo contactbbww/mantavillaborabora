@@ -600,50 +600,33 @@ footer{background:#0c2534;color:rgba(255,255,255,.65);padding:52px 32px 28px;}
   <div class="slabel">Disponibilités</div>
   <h2 class="stitle">Vérifier vos <em>dates</em></h2>
   <div class="div"></div>
-  <p class="ssub" style="margin-bottom:28px;">Calendrier synchronisé en temps réel avec Airbnb. Réservez en direct pour économiser les frais de service voyageur (~13%).</p>
-  <div class="cal-wrap">
-    <div class="cal-top">
-      <h3 class="cal-title"><span class="fr-text">Choisissez vos dates</span><span class="en-text">Choose your dates</span></h3>
-      <div class="cal-vtabs">
-        <button class="cal-tab active" onclick="swVilla('octopus',this)">Octopus Villa</button>
-        <button class="cal-tab" onclick="swVilla('manta',this)">Manta Villa</button>
-      </div>
+  <p class="ssub" style="margin-bottom:28px;"><span class="fr-text">Consultez les disponibilités sur Airbnb, puis contactez-nous pour réserver en direct et économiser les frais de service (~13%).</span><span class="en-text">Check availability on Airbnb, then contact us to book directly and save on service fees (~13%).</span></p>
+  <div class="cal-wrap" style="text-align:center;">
+    <p style="font-size:15px;color:var(--text);margin-bottom:28px;">
+      <span class="fr-text">Cliquez sur votre villa pour voir le calendrier sur Airbnb :</span>
+      <span class="en-text">Click on your villa to check availability on Airbnb:</span>
+    </p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:36px;">
+      <a href="https://www.airbnb.fr/rooms/968187139458719358" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:var(--ocean);color:#fff;text-decoration:none;padding:14px 28px;border-radius:10px;font-size:15px;font-weight:600;">
+        🐙 <span><span class="fr-text">Octopus Villa — Voir sur Airbnb</span><span class="en-text">Octopus Villa — View on Airbnb</span></span>
+      </a>
+      <a href="https://www.airbnb.fr/rooms/44239001" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:var(--ocean);color:#fff;text-decoration:none;padding:14px 28px;border-radius:10px;font-size:15px;font-weight:600;">
+        🦅 <span><span class="fr-text">Manta Villa — Voir sur Airbnb</span><span class="en-text">Manta Villa — View on Airbnb</span></span>
+      </a>
     </div>
-    
-    <!-- SYNC AIRBNB iCAL -->
-    <div class="ical-sync" id="icalBlock">
-      <div class="ical-sync-title">🔄 Synchroniser avec Airbnb</div>
-      <div class="ical-sync-row">
-        <input class="ical-input" id="icalUrlInput" type="url" placeholder="Manta Villa configurée ✓ — colle ici le lien iCal Octopus Villa" value="https://www.airbnb.fr/calendar/ical/968187139458719358.ics?t=d6f788005b4241e0b1666678b9769c6e">
-        <button class="ical-btn" onclick="syncIcal()">Synchroniser</button>
-      </div>
-      <div class="ical-status" id="icalStatus">🔄 Manta Villa : sync auto active — pour Octopus, colle son lien iCal ci-dessus</div>
-    </div>
-    <div class="cal-nav">
-      <button class="cal-nb" onclick="prevM()">‹</button>
-      <span class="cal-mn" id="mName">Avril 2026</span>
-      <button class="cal-nb" onclick="nextM()">›</button>
-    </div>
-    <div id="calGrid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-bottom:8px;"></div>
-    <div class="cal-legend">
-      <div class="leg-item"><div class="ldot ld-a"></div> <span class="fr-text">Disponible</span><span class="en-text">Available</span></div>
-      <div class="leg-item"><div class="ldot ld-b"></div> <span class="fr-text">Réservé</span><span class="en-text">Booked</span></div>
-      <div class="leg-item"><div class="ldot ld-s"></div> <span class="fr-text">Sélectionné</span><span class="en-text">Selected</span></div>
-    </div>
-    <div class="bpanel" id="bPanel">
-      <div class="bdates">
-        <div class="dbox"><label>Arrivée</label><span id="ci">—</span></div>
-        <div class="dbox"><label>Départ</label><span id="co">—</span></div>
-        <div class="dbox"><label>Durée</label><span id="nc">—</span></div>
-      </div>
-      <div class="bsum">
-        <div><div class="bprice" id="tp">—</div><div class="bnote" id="pb"></div></div>
-        <div class="bbtns">
-          <a href="#" onclick="openBookModal();return false;" class="btn-p" id="bdBtn"><span class="fr-text">Réserver en direct</span><span class="en-text">Book directly</span></a>
-          <a href="https://www.airbnb.fr/rooms/968187139458719358" target="_blank" class="btn-ab">⬡ Airbnb</a>
-        </div>
-      </div>
-      <div class="sav-banner" id="sv"></div>
+    <div style="background:var(--ocean-p);border-radius:12px;padding:24px 28px;max-width:520px;margin:0 auto;">
+      <p style="font-size:14px;color:var(--ocean);font-weight:600;margin-bottom:8px;">
+        <span class="fr-text">💡 Économisez ~13% en réservant en direct</span>
+        <span class="en-text">💡 Save ~13% booking directly with us</span>
+      </p>
+      <p style="font-size:13px;color:var(--text);margin-bottom:20px;">
+        <span class="fr-text">Une fois vos dates choisies sur Airbnb, revenez ici pour nous envoyer votre demande de réservation directe.</span>
+        <span class="en-text">Once you've checked availability on Airbnb, come back here to send your direct booking request.</span>
+      </p>
+      <a href="#" onclick="openBookModal();return false;" class="btn-p">
+        <span class="fr-text">Demander une réservation directe</span>
+        <span class="en-text">Request a direct booking</span>
+      </a>
     </div>
   </div>
 </div>
