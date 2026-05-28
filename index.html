@@ -910,7 +910,11 @@ function updatePanel(){
 // ============================================================
 // SYNCHRONISATION iCAL AIRBNB
 // ============================================================
-var PROXY = 'https://corsproxy.io/?';
+var PROXY_LOCAL = '/ical-proxy.php?url=';
+var PROXIES_FALLBACK = [
+  'https://api.allorigins.win/raw?url=',
+  'https://corsproxy.io/?'
+];
 
 function syncIcal(){
   var targetVilla = villa;
@@ -918,15 +922,25 @@ function syncIcal(){
   if(!url){ setIcalStatus("⚠️ Colle d'abord l'URL de ton calendrier Airbnb", 'err'); return; }
   if(!url.startsWith('http')){ setIcalStatus("⚠️ L'URL doit commencer par https://", 'err'); return; }
   setIcalStatus('⏳ Synchronisation en cours...', '');
-  
-  fetch(PROXY + encodeURIComponent(url))
-    .then(function(r){ 
+  fetchIcal(PROXY_LOCAL + encodeURIComponent(url), url, targetVilla, 0);
+}
+
+function fetchIcal(proxyUrl, originalUrl, targetVilla, fallbackIdx){
+  fetch(proxyUrl)
+    .then(function(r){
       if(!r.ok) throw new Error('HTTP '+r.status);
-      return r.text(); 
+      return r.text();
     })
-    .then(function(ics){ parseIcalForVilla(ics, url, targetVilla); })
-    .catch(function(e){ 
-      setIcalStatus("❌ Erreur: " + e.message + " — vérifie que l'URL est correcte", 'err'); 
+    .then(function(ics){
+      if(!ics || !ics.includes('BEGIN:VCALENDAR')) throw new Error('Réponse invalide');
+      parseIcalForVilla(ics, originalUrl, targetVilla);
+    })
+    .catch(function(){
+      if(fallbackIdx < PROXIES_FALLBACK.length){
+        fetchIcal(PROXIES_FALLBACK[fallbackIdx] + encodeURIComponent(originalUrl), originalUrl, targetVilla, fallbackIdx + 1);
+      } else {
+        setIcalStatus("❌ Impossible de récupérer le calendrier. Vérifie l'URL iCal dans Airbnb.", 'err');
+      }
     });
 }
 
