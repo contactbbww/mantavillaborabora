@@ -926,8 +926,11 @@ function syncIcal(){
 }
 
 function fetchIcal(proxyUrl, originalUrl, targetVilla, fallbackIdx){
-  fetch(proxyUrl)
+  var controller = new AbortController();
+  var timer = setTimeout(function(){ controller.abort(); }, 10000);
+  fetch(proxyUrl, { signal: controller.signal })
     .then(function(r){
+      clearTimeout(timer);
       if(!r.ok) throw new Error('HTTP '+r.status);
       return r.text();
     })
@@ -936,6 +939,7 @@ function fetchIcal(proxyUrl, originalUrl, targetVilla, fallbackIdx){
       parseIcalForVilla(ics, originalUrl, targetVilla);
     })
     .catch(function(){
+      clearTimeout(timer);
       if(fallbackIdx < PROXIES_FALLBACK.length){
         fetchIcal(PROXIES_FALLBACK[fallbackIdx] + encodeURIComponent(originalUrl), originalUrl, targetVilla, fallbackIdx + 1);
       } else {
