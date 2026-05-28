@@ -1081,17 +1081,12 @@ function toggleLang(){
 function openBookModal(){
   var m=document.getElementById('bookModal');
   if(!m) return;
-  // Nom villa
+  // Sélecteur de villa
+  document.getElementById('bm-villa-sel').value=villa;
   document.getElementById('bm-villa').textContent=villa==='octopus'?'Octopus Villa':'Manta Villa';
-  // Pré-remplir dates depuis le calendrier si sélectionnées
-  if(cin){
-    var d=new Date(cin.y,cin.m,cin.d);
-    document.getElementById('bm-cin').value=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
-  } else { document.getElementById('bm-cin').value=''; }
-  if(cout){
-    var d2=new Date(cout.y,cout.m,cout.d);
-    document.getElementById('bm-cout').value=d2.getFullYear()+'-'+String(d2.getMonth()+1).padStart(2,'0')+'-'+String(d2.getDate()).padStart(2,'0');
-  } else { document.getElementById('bm-cout').value=''; }
+  // Vider les dates
+  document.getElementById('bm-cin').value='';
+  document.getElementById('bm-cout').value='';
   // Adapter les options adultes selon la villa
   var selA=document.getElementById('bm-adults');
   var maxA=villa==='manta'?4:8;
@@ -1100,6 +1095,15 @@ function openBookModal(){
   updateBookForm();
   m.style.display='flex';
   document.body.style.overflow='hidden';
+}
+function onVillaChange(){
+  villa=document.getElementById('bm-villa-sel').value;
+  document.getElementById('bm-villa').textContent=villa==='octopus'?'Octopus Villa':'Manta Villa';
+  var selA=document.getElementById('bm-adults');
+  var maxA=villa==='manta'?4:8;
+  selA.innerHTML='';
+  for(var i=1;i<=maxA;i++) selA.innerHTML+='<option value="'+i+'"'+(i===2?' selected':'')+'>'+i+'</option>';
+  updateBookForm();
 }
 function closeBookModal(){
   document.getElementById('bookModal').style.display='none';
@@ -1318,7 +1322,15 @@ var airbnbLinks={
   <div style="background:#fff;border-radius:16px;max-width:520px;width:100%;margin:0 auto;padding:32px;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.25);">
     <button onclick="closeBookModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;cursor:pointer;font-size:22px;color:#aaa;line-height:1;padding:4px;">✕</button>
     <div id="bm-villa" style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-bottom:4px;font-weight:500;"></div>
-    <h3 style="font-size:20px;font-weight:500;color:var(--ocean);margin:0 0 22px;font-family:'Cormorant Garamond',serif;">Demande de réservation</h3>
+    <h3 style="font-size:20px;font-weight:500;color:var(--ocean);margin:0 0 18px;font-family:'Cormorant Garamond',serif;">Demande de réservation</h3>
+    <!-- Choix villa -->
+    <div style="margin-bottom:16px;">
+      <label style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;display:block;margin-bottom:6px;">Villa</label>
+      <select id="bm-villa-sel" onchange="onVillaChange()" style="width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;background:#fff;box-sizing:border-box;">
+        <option value="octopus">🐙 Octopus Villa — jusqu'à 6 personnes</option>
+        <option value="manta">🦅 Manta Villa — jusqu'à 4 personnes</option>
+      </select>
+    </div>
     <!-- Dates -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
       <div>
