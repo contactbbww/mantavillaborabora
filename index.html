@@ -6,7 +6,6 @@
 <title>Location villa Bora Bora face au lagon | Octopus & Manta Villa</title>
 <meta name="description" content="Deux villas de rêve avec piscine privée et accès direct au lagon à Bora Bora. Jusqu'à 6 personnes. Hôtes locaux. Réservez en direct et économisez.">
 <meta name="robots" content="index, follow">
-<meta name="google-site-verification" content="UrmlUd-SMXWbPnalMcjFHmOt-ZxLQOlMp-9kp-3apYIko"/>
 
 <link rel="canonical" href="https://www.mantavillaborabora.com/">
 <link rel="alternate" hreflang="fr" href="https://www.mantavillaborabora.com/">
@@ -90,6 +89,42 @@
       "occupancy": {"@type": "QuantitativeValue", "maxValue": 4},
       "numberOfRooms": 2,
       "containedInPlace": {"@id": "https://www.mantavillaborabora.com/#business"}
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.mantavillaborabora.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Où sont situées les villas à Bora Bora ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Octopus Villa et Manta Villa sont situées à Vai Api, sur l'île principale de Bora Bora, en Polynésie française. Les deux villas sont en bord de lagon, avec un accès direct à l'eau et une piscine privée."}
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de personnes peuvent loger dans les villas ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Octopus Villa accueille jusqu'à 6 personnes (3 chambres, 3 salles de bain). Manta Villa accueille jusqu'à 4 personnes (2 chambres)."}
+        },
+        {
+          "@type": "Question",
+          "name": "Quels sont les tarifs par nuit ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Octopus Villa est à partir de 700 € la nuit (3 nuits minimum). Manta Villa est à partir de 170 € la nuit (2 nuits minimum). En réservant en direct, vous économisez les frais de service Airbnb."}
+        },
+        {
+          "@type": "Question",
+          "name": "Comment réserver en direct ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Consultez les disponibilités sur nos annonces Airbnb, puis contactez-nous par e-mail (contact@mantavillaborabora.com) ou par téléphone (+689 89 22 13 76) pour réserver en direct. Réponse garantie sous 1 heure."}
+        },
+        {
+          "@type": "Question",
+          "name": "Quels équipements sont inclus ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Chaque villa dispose d'une piscine privée, d'un accès direct au lagon, du Wi-Fi, de la climatisation et d'une cuisine équipée. Le linge de maison et les serviettes sont fournis."}
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des activités et excursions ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui. En tant qu'hôtes locaux, nous vous aidons à organiser vos excursions : tour du lagon avec le Capitaine Loulou, cabine sous-marine Nautilus, snorkeling avec les raies et requins, et dîners au coucher du soleil."}
+        }
+      ]
     }
   ]
 }
@@ -280,6 +315,14 @@ nav{position:sticky;top:0;z-index:100;background:rgba(244,239,230,0.96);backdrop
 .cta-div{width:1px;height:52px;background:var(--b);}
 .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
 
+/* FAQ */
+.faq-item{border:1px solid var(--b);border-radius:10px;background:#fff;margin-bottom:10px;overflow:hidden;}
+.faq-item summary{list-style:none;cursor:pointer;padding:18px 22px;font-size:15px;color:var(--ocean);font-weight:500;display:flex;align-items:center;justify-content:space-between;gap:14px;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"+";font-size:22px;color:var(--coral);font-weight:300;line-height:1;flex-shrink:0;transition:transform .2s;}
+.faq-item[open] summary::after{transform:rotate(45deg);}
+.faq-a{padding:0 22px 20px;font-size:14px;color:var(--muted);line-height:1.75;}
+
 /* FOOTER */
 footer{background:#0c2534;color:rgba(255,255,255,.65);padding:52px 32px 28px;}
 .fi{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px;}
@@ -393,7 +436,7 @@ footer{background:#0c2534;color:rgba(255,255,255,.65);padding:52px 32px 28px;}
   <div class="hero-ov"></div>
   <div class="hero-c">
     <div class="h-tag"><span class="fr-text">Vai Api · Bora Bora · Polynésie française</span><span class="en-text">Vai Api · Bora Bora · French Polynesia</span></div>
-    <h1 class="h-title"><span class="fr-text">Villas de rêve<br>face au <em>lagon</em></span><span class="en-text">Dream villas<br>on the <em>lagoon</em></span></h1>
+    <h1 class="h-title"><span class="fr-text">Villas de rêve à <em>Bora Bora</em><br>face au lagon</span><span class="en-text">Dream villas in <em>Bora Bora</em><br>on the lagoon</span></h1>
     <p class="h-sub"><span class="fr-text">Piscine privée face à l'eau, accès direct au lagon, hôtes locaux passionnés — deux villas uniques à Bora Bora.</span><span class="en-text">Private pool facing the water, direct lagoon access, passionate local hosts — two unique villas in Bora Bora.</span></p>
     <div class="h-stars"><span class="stars">★★★★★</span> 4.95 · 47 avis Airbnb vérifiés</div>
     <div class="h-ctas">
@@ -483,15 +526,15 @@ footer{background:#0c2534;color:rgba(255,255,255,.65);padding:52px 32px 28px;}
 <div onclick="openLB('oct_1')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_1" loading="lazy" src="images/oct-full-1.jpeg" alt="Salon polynésien" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Salon polynésien</div></div>
 <div onclick="openLB('oct_2')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_2" loading="lazy" src="images/oct-full-2.jpeg" alt="Salon vue lagon" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Salon vue lagon</div></div>
 <div onclick="openLB('oct_3')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_3" loading="lazy" src="images/oct-full-3.jpeg" alt="Cuisine moderne" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Cuisine moderne</div></div>
-<div onclick="openLB('oct_4')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_4" loading="lazy" src="images/oct-full-4.jpeg" alt="Chambre 1 — thème marin" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Chambre 1 — thème marin</div></div>
+<div onclick="openLB('oct_4')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_4" loading="lazy" src="images/oct-full-4.jpeg" alt="Chambre thème marin Octopus Villa Bora Bora" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Chambre 1 — thème marin</div></div>
 <div onclick="openLB('oct_5')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_5" loading="lazy" src="images/oct-full-5.jpeg" alt="Terrasse chambre 1" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Terrasse chambre 1</div></div>
-<div onclick="openLB('oct_6')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_6" loading="lazy" src="images/oct-full-6.jpeg" alt="Chambre 2" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Chambre 2</div></div>
+<div onclick="openLB('oct_6')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_6" loading="lazy" src="images/oct-full-6.jpeg" alt="Chambre Octopus Villa Bora Bora vue lagon" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Chambre 2</div></div>
 <div onclick="openLB('oct_7')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_7" loading="lazy" src="images/oct-full-7.jpeg" alt="Chambre 2 — vue lagon" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Chambre 2 — vue lagon</div></div>
 <div onclick="openLB('oct_8')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_8" loading="lazy" src="images/oct-full-8.jpeg" alt="Chambre 3 — vue lagon" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Chambre 3 — vue lagon</div></div>
 <div onclick="openLB('oct_9')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_9" loading="lazy" src="images/oct-full-9.jpeg" alt="Chambre 3 — literie corail" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Chambre 3 — literie corail</div></div>
 <div onclick="openLB('oct_10')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_10" loading="lazy" src="images/oct-full-10.jpeg" alt="Salon extérieur & piscine" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Salon extérieur & piscine</div></div>
 <div onclick="openLB('oct_11')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_11" loading="lazy" src="images/oct-full-11.jpeg" alt="Terrasse repas vue lagon" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Terrasse repas vue lagon</div></div>
-<div onclick="openLB('oct_12')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_12" loading="lazy" src="images/oct-full-12.jpeg" alt="Bains de soleil" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Bains de soleil</div></div>
+<div onclick="openLB('oct_12')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_12" loading="lazy" src="images/oct-full-12.jpeg" alt="Bains de soleil au bord de la piscine Octopus Villa Bora Bora" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Bains de soleil</div></div>
 <div onclick="openLB('oct_13')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_oct_13" loading="lazy" src="images/oct-full-13.jpeg" alt="Piscine au coucher de soleil" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Piscine au coucher de soleil</div></div>
   </div>
 </div>
@@ -585,14 +628,14 @@ footer{background:#0c2534;color:rgba(255,255,255,.65);padding:52px 32px 28px;}
   <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--ocean);margin-bottom:24px;">10 photos — cliquez pour agrandir</h3>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;">
 <div onclick="openLB('man_0')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_man_0" loading="lazy" src="images/man-full-0.jpeg" alt="Vue aérienne & ponton" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Vue aérienne & ponton</div></div>
-<div onclick="openLB('man_1')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_man_1" loading="lazy" src="images/man-full-1.jpeg" alt="Chambre 1" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Chambre 1</div></div>
+<div onclick="openLB('man_1')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_man_1" loading="lazy" src="images/man-full-1.jpeg" alt="Chambre Manta Villa Bora Bora décoration teck" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Chambre 1</div></div>
 <div onclick="openLB('man_2')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_man_2" loading="lazy" src="images/man-full-2.jpeg" alt="Chambre 2 — tropicale" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Chambre 2 — tropicale</div></div>
-<div onclick="openLB('man_3')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_man_3" loading="lazy" src="images/man-full-3.jpeg" alt="Salle de bain" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Salle de bain</div></div>
-<div onclick="openLB('man_4')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_man_4" loading="lazy" src="images/man-full-4.jpeg" alt="Salon & cuisine" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Salon & cuisine</div></div>
+<div onclick="openLB('man_3')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_man_3" loading="lazy" src="images/man-full-3.jpeg" alt="Salle de bain Manta Villa Bora Bora douche italienne" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Salle de bain</div></div>
+<div onclick="openLB('man_4')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_man_4" loading="lazy" src="images/man-full-4.jpeg" alt="Salon et cuisine Manta Villa Bora Bora" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Salon & cuisine</div></div>
 <div onclick="openLB('man_5')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_man_5" loading="lazy" src="images/man-full-5.jpeg" alt="Vue depuis l'intérieur" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Vue depuis l'intérieur</div></div>
 <div onclick="openLB('man_6')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_man_6" loading="lazy" src="images/man-full-6.jpeg" alt="Roses blanches au coucher" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Roses blanches au coucher</div></div>
 <div onclick="openLB('man_7')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_man_7" loading="lazy" src="images/man-full-7.jpeg" alt="Terrasse & ponton" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Terrasse & ponton</div></div>
-<div onclick="openLB('man_8')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_man_8" loading="lazy" src="images/man-full-8.jpeg" alt="Coucher de soleil" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Coucher de soleil</div></div>
+<div onclick="openLB('man_8')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_man_8" loading="lazy" src="images/man-full-8.jpeg" alt="Coucher de soleil sur le lagon depuis Manta Villa Bora Bora" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Coucher de soleil</div></div>
 <div onclick="openLB('man_9')" style="cursor:pointer;background:#f4efe6;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'"><img id="img_man_9" loading="lazy" src="images/man-full-9.jpeg" alt="Café face au lagon" style="width:100%;height:auto;display:block;"><div style="padding:8px 12px;font-size:11px;color:#6b6b6b;letter-spacing:.03em;">Café face au lagon</div></div>
   </div>
 </div>
@@ -768,6 +811,45 @@ footer{background:#0c2534;color:rgba(255,255,255,.65);padding:52px 32px 28px;}
   </div>
 </div>
 
+<!-- FAQ -->
+<div id="faq" class="sw" style="max-width:820px;">
+  <div style="text-align:center;">
+    <div class="slabel">FAQ</div>
+    <h2 class="stitle"><span class="fr-text">Questions <em>fréquentes</em></span><span class="en-text">Frequently asked <em>questions</em></span></h2>
+    <div class="div" style="margin:18px auto 28px;"></div>
+  </div>
+
+  <details class="faq-item">
+    <summary><span class="fr-text">Où sont situées les villas à Bora Bora ?</span><span class="en-text">Where are the villas located in Bora Bora?</span></summary>
+    <div class="faq-a"><span class="fr-text">Octopus Villa et Manta Villa sont situées à Vai Api, sur l'île principale de Bora Bora, en Polynésie française. Les deux villas sont en bord de lagon, avec un accès direct à l'eau et une piscine privée.</span><span class="en-text">Octopus Villa and Manta Villa are located in Vai Api, on the main island of Bora Bora, French Polynesia. Both villas are lagoon-front, with direct water access and a private pool.</span></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><span class="fr-text">Combien de personnes peuvent loger dans les villas ?</span><span class="en-text">How many guests can stay in the villas?</span></summary>
+    <div class="faq-a"><span class="fr-text">Octopus Villa accueille jusqu'à 6 personnes (3 chambres, 3 salles de bain). Manta Villa accueille jusqu'à 4 personnes (2 chambres). Idéales pour familles, couples et petits groupes d'amis.</span><span class="en-text">Octopus Villa sleeps up to 6 guests (3 bedrooms, 3 bathrooms). Manta Villa sleeps up to 4 guests (2 bedrooms). Perfect for families, couples and small groups of friends.</span></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><span class="fr-text">Quels sont les tarifs par nuit ?</span><span class="en-text">What are the nightly rates?</span></summary>
+    <div class="faq-a"><span class="fr-text">Octopus Villa est à partir de 700 € la nuit (3 nuits minimum). Manta Villa est à partir de 170 € la nuit (2 nuits minimum). En réservant en direct avec nous, vous économisez les frais de service Airbnb.</span><span class="en-text">Octopus Villa starts at €700 per night (3-night minimum). Manta Villa starts at €170 per night (2-night minimum). Booking directly with us saves you the Airbnb service fees.</span></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><span class="fr-text">Comment réserver en direct ?</span><span class="en-text">How do I book directly?</span></summary>
+    <div class="faq-a"><span class="fr-text">Consultez les disponibilités sur nos annonces Airbnb, puis contactez-nous par e-mail (contact@mantavillaborabora.com) ou par téléphone (+689 89 22 13 76) pour réserver en direct. Réponse garantie sous 1 heure.</span><span class="en-text">Check availability on our Airbnb listings, then contact us by email (contact@mantavillaborabora.com) or phone (+689 89 22 13 76) to book directly. Response guaranteed within 1 hour.</span></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><span class="fr-text">Quels équipements sont inclus ?</span><span class="en-text">What amenities are included?</span></summary>
+    <div class="faq-a"><span class="fr-text">Chaque villa dispose d'une piscine privée, d'un accès direct au lagon, du Wi-Fi, de la climatisation et d'une cuisine équipée. Le linge de maison et les serviettes sont fournis.</span><span class="en-text">Each villa features a private pool, direct lagoon access, Wi-Fi, air conditioning and a fully equipped kitchen. Bed linen and towels are provided.</span></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><span class="fr-text">Proposez-vous des activités et excursions ?</span><span class="en-text">Do you offer activities and excursions?</span></summary>
+    <div class="faq-a"><span class="fr-text">Oui. En tant qu'hôtes locaux, nous vous aidons à organiser vos excursions : tour du lagon avec le Capitaine Loulou, cabine sous-marine Nautilus, snorkeling avec les raies et requins, et dîners au coucher du soleil.</span><span class="en-text">Yes. As local hosts, we help you arrange your excursions: lagoon tours with Captain Loulou, the Nautilus underwater cabin, snorkeling with rays and sharks, and sunset dinners.</span></div>
+  </details>
+</div>
+
 <footer>
   <div class="fi">
     <div class="fb">
@@ -781,7 +863,7 @@ footer{background:#0c2534;color:rgba(255,255,255,.65);padding:52px 32px 28px;}
     </div>
     <div class="fc"><h4>Villas</h4><ul><li><a href="#octopus">Octopus Villa</a></li><li><a href="#manta">Manta Villa</a></li><li><a href="#cal">Disponibilités</a></li><li><a href="#cal">Tarifs</a></li></ul></div>
     <div class="fc"><h4>Expériences</h4><ul><li><a href="#activites">Capitaine Loulou</a></li><li><a href="#activites">Nautilus</a></li><li><a href="#activites">Snorkeling</a></li><li><a href="#activites">Coucher de soleil</a></li></ul></div>
-    <div class="fc"><h4>Infos</h4><ul><li><a href="#avis">Avis voyageurs</a></li><li><a href="#" onclick="document.getElementById('modalCGV').style.display='block';return false;">CGV</a></li><li><a href="#" onclick="document.getElementById('modalML').style.display='block';return false;">Mentions légales</a></li></ul></div>
+    <div class="fc"><h4>Infos</h4><ul><li><a href="#avis">Avis voyageurs</a></li><li><a href="#faq">FAQ</a></li><li><a href="#" onclick="document.getElementById('modalCGV').style.display='block';return false;">CGV</a></li><li><a href="#" onclick="document.getElementById('modalML').style.display='block';return false;">Mentions légales</a></li></ul></div>
   </div>
   <div class="fbot">
     <span>© 2026 Octopus &amp; Manta Villa — Bora Bora</span>
